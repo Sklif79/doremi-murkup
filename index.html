@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TITLE</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/desktop.css">
+    <link rel="stylesheet" href="assets/css/tablet.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+
+    <!-- favicon -->
+
+    <!--[if IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-top">
+        <div class="header-top__side">
+            Оригинальная парфюмерия в Беларуси
+
+            <a href="#" class="header-top__version">другая версия</a>
+        </div>
+        <div class="header-top__side">
+            <svg class="header-top__phone-ico">
+                <use xlink:href='#svg-telegram' href='#svg-telegram'/>
+            </svg>
+            <svg class="header-top__phone-ico">
+                <use xlink:href='#svg-viber' href='#svg-viber'/>
+            </svg>
+            <a href="tel:+375259387109" class="header-top__phone">+375 25 938-71-09</a>
+            <span class="header-top__schedule">Пн-Вс с 10:00 до 20:00</span>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <a href="/" class="header-logo">
+            <svg class="header-logo__svg">
+                <use xlink:href='#svg-logo' href='#svg-logo'/>
+            </svg>
+        </a>
+        <ul class="header-nav">
+            <li>
+                <a href="#">
+                    <svg class="header-nav__img">
+                        <use xlink:href='#svg-nav-male' href='#svg-nav-male'/>
+                    </svg>
+                    Для мужчин
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg class="header-nav__img">
+                        <use xlink:href='#svg-nav-female' href='#svg-nav-female'/>
+                    </svg>
+                    Для Женщин
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg class="header-nav__img">
+                        <use xlink:href='#svg-nav-brands' href='#svg-nav-brands'/>
+                    </svg>
+                    Бренды
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg class="header-nav__img">
+                        <use xlink:href='#svg-nav-sales' href='#svg-nav-sales'/>
+                    </svg>
+                    Акции
+                </a>
+            </li>
+        </ul>
+        <form action="" method="post" name="" class="search">
+            <input type="text" name="search" class="search__field"
+                   placeholder="Давайте найдем аромат, более 2500 товаров…">
+            <button type="reset" class="search__reset">
+                <svg class="search__reset-svg">
+                    <use xlink:href='#svg-close' href='#svg-close'/>
+                </svg>
+            </button>
+            <button type="submit" value="" class="search__submit">
+                <svg class="search__submit-svg">
+                    <use xlink:href='#svg-magnifier' href='#svg-magnifier'/>
+                </svg>
+            </button>
+        </form>
+
+        <a href="#" class="header-basket">
+            <div class="header-basket__img">
+                <svg class="header-basket__svg">
+                    <use xlink:href='#svg-header-basket' href='#svg-header-basket'/>
+                </svg>
+            </div>
+            <div class="header-basket__desktop">
+                Корзина
+                <span class="header-basket__desktop-subtitle">
+                    <span class="header-basket__count">2</span> товара <b>240 р</b>
+                </span>
+            </div>
+        </a>
+
+        <!-- миникарта будет отображаться только при наличии .header-basket-minicard__item -->
+        <div class="header-basket-minicard">
+            <div class="header-basket-minicard-inner">
+                <div class="header-basket-minicard-items">
+                    <div class="header-basket-minicard__item">
+                        <div class="header-basket-minicard__img">
+                            <img src="assets/images/Temp/minicard-img.png" alt="">
+                        </div>
+                        <div class="header-basket-minicard__description">
+                            <div class="header-basket-minicard__title">Etro PEGASO Unisex</div>
+                            <div class="header-basket-minicard__info">50 ml <span>1 шт.</span></div>
+                            <div class="header-basket-minicard__price">80 руб.</div>
+                        </div>
+                        <div class="header-basket-minicard__close"></div>
+                    </div>
+                    <div class="header-basket-minicard__item">
+                        <div class="header-basket-minicard__img">
+                            <img src="assets/images/Temp/minicard-img.png" alt="">
+                        </div>
+                        <div class="header-basket-minicard__description">
+                            <div class="header-basket-minicard__title">Etro PEGASO Unisex</div>
+                            <div class="header-basket-minicard__info">50 ml <span>1 шт.</span></div>
+                            <div class="header-basket-minicard__price">80 руб.</div>
+                        </div>
+                        <div class="header-basket-minicard__close"></div>
+                    </div>
+                </div>
+                <a href="#" class="btn header-basket-minicard__lnk theme_red">Оформить заказ</a>
+            </div>
+        </div>
+    </div>
+    <div class="search-result">
+        <div class="search-result__corner"></div>
+        <div class="search-result-titles container">
+            <div class="search-result__title">Возможно вы ищете</div>
+
+            <div class="search-result-titles-inner">
+                <a href="#" class="search-result-titles__item btn">Tom Ford CHAMPACA ABSOLUTE Unisex</a>
+                <a href="#" class="search-result-titles__item btn">Tom Ford CHAMPACA ABSOLUTE Unisex</a>
+                <a href="#" class="search-result-titles__item btn">Tom Ford CHAMPACA ABSOLUTE Unisex</a>
+                <a href="#" class="search-result-titles__item btn">Tom Ford CHAMPACA ABSOLUTE Unisex</a>
+                <a href="#" class="search-result-titles__item btn">Tom Ford CHAMPACA ABSOLUTE Unisex</a>
+            </div>
+        </div>
+        <div class="search-result-products container">
+            <div class="search-result__title">Товары</div>
+
+            <div class="products-slider-container js_product-slider">
+                <a href="#" class="products-slider-item">
+                    <div class="product-slider__img">
+                        <div class="product-slider__label-sale">-30%</div>
+                        <img src="assets/images/Temp/sliders/pr-sl-1.png" alt="">
+                    </div>
+                    <div class="product-slider__brand">Tom Ford</div>
+                    <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                    <div class="product-slider__price">от <span>80 руб.</span></div>
+                </a>
+                <a href="#" class="products-slider-item">
+                    <div class="product-slider__img">
+                        <div class="product-slider__label-sale">-30%</div>
+                        <img src="assets/images/Temp/sliders/pr-sl-3.png" alt="">
+                    </div>
+                    <div class="product-slider__brand">Tom Ford</div>
+                    <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                    <div class="product-slider__price">от <span>80 руб.</span></div>
+                </a>
+                <a href="#" class="products-slider-item sale">
+                    <div class="product-slider__img">
+                        <div class="product-slider__label-sale">-30%</div>
+                        <img src="assets/images/Temp/sliders/pr-sl-2.png" alt="">
+                    </div>
+                    <div class="product-slider__brand">Tom Ford</div>
+                    <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                    <div class="product-slider__price">от <span>80 руб.</span></div>
+                </a>
+                <a href="#" class="products-slider-item">
+                    <div class="product-slider__img">
+                        <div class="product-slider__label-sale">-30%</div>
+                        <img src="assets/images/Temp/sliders/pr-sl-1.png" alt="">
+                    </div>
+                    <div class="product-slider__brand">Tom Ford</div>
+                    <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                    <div class="product-slider__price">от <span>80 руб.</span></div>
+                </a>
+                <a href="#" class="products-slider-item">
+                    <div class="product-slider__img">
+                        <div class="product-slider__label-sale">-30%</div>
+                        <img src="assets/images/Temp/sliders/pr-sl-2.png" alt="">
+                    </div>
+                    <div class="product-slider__brand">Tom Ford</div>
+                    <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                    <div class="product-slider__price">от <span>80 руб.</span></div>
+                </a>
+                <a href="#" class="products-slider-item sale">
+                    <div class="product-slider__img">
+                        <div class="product-slider__label-sale">-30%</div>
+                        <img src="assets/images/Temp/sliders/pr-sl-3.png" alt="">
+                    </div>
+                    <div class="product-slider__brand">Tom Ford</div>
+                    <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                    <div class="product-slider__price">от <span>80 руб.</span></div>
+                </a>
+                <a href="#" class="products-slider-item sale">
+                    <div class="product-slider__img">
+                        <div class="product-slider__label-sale">-30%</div>
+                        <img src="assets/images/Temp/sliders/pr-sl-3.png" alt="">
+                    </div>
+                    <div class="product-slider__brand">Tom Ford</div>
+                    <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                    <div class="product-slider__price">от <span>80 руб.</span></div>
+                </a>
+            </div>
+        </div>
+        <div class="container search-result-btn-wrap">
+            <a href="#" class="search-result__show-btn btn theme_black">смотреть все 123</a>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <section class="images-nav">
+        <div class="images-nav__big" style="background-image: url('assets/images/slide_1.jpg')">
+            <div class="images-nav__big-info">
+                <div class="images-nav__big-title">Hugo Boss</div>
+                <div class="images-nav__big-subtitle">Для активного, деятельного и<br> думающего мужчины</div>
+                <p>Освежающий аромат с изысканными приятными акцентами</p>
+                <a href="" class="btn images-nav__big-btn theme_white">
+                    Читать подробнее
+                    <svg class="images-nav__svg svg-theme_black">
+                        <use xlink:href='#svg-right-arrow' href='#svg-right-arrow'/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="images-nav__double">
+            <a href="#" class="images-nav__double-women images-nav__link"
+               style="background-image: url('assets/images/slide_2.png')">
+                <span class="images-nav__double-title">Ароматы<br> для женщин
+                    <svg class="images-nav__svg svg-theme_white">
+                        <use xlink:href='#svg-right-arrow' href='#svg-right-arrow'/>
+                    </svg>
+                </span>
+            </a>
+            <a href="#" class="images-nav__double-men images-nav__link"
+               style="background-image: url('assets/images/slide_3.png')">
+                <span class="images-nav__double-title">Ароматы<br> для мужчин
+                    <svg class="images-nav__svg svg-theme_white">
+                        <use xlink:href='#svg-right-arrow' href='#svg-right-arrow'/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <section class="products-slider">
+        <div class="container products-slider-container js_product-slider">
+            <a href="#" class="products-slider-item">
+                <div class="product-slider__img">
+                    <div class="product-slider__label-sale">-30%</div>
+                    <img src="assets/images/Temp/sliders/pr-sl-1.png" alt="">
+                </div>
+                <div class="product-slider__brand">Tom Ford</div>
+                <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                <div class="product-slider__price">от <span>80 руб.</span></div>
+            </a>
+            <a href="#" class="products-slider-item">
+                <div class="product-slider__img">
+                    <div class="product-slider__label-sale">-30%</div>
+                    <img src="assets/images/Temp/sliders/pr-sl-3.png" alt="">
+                </div>
+                <div class="product-slider__brand">Tom Ford</div>
+                <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                <div class="product-slider__price">от <span>80 руб.</span></div>
+            </a>
+            <a href="#" class="products-slider-item sale">
+                <div class="product-slider__img">
+                    <div class="product-slider__label-sale">-30%</div>
+                    <img src="assets/images/Temp/sliders/pr-sl-2.png" alt="">
+                </div>
+                <div class="product-slider__brand">Tom Ford</div>
+                <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                <div class="product-slider__price">от <span>80 руб.</span></div>
+            </a>
+            <a href="#" class="products-slider-item">
+                <div class="product-slider__img">
+                    <div class="product-slider__label-sale">-30%</div>
+                    <img src="assets/images/Temp/sliders/pr-sl-1.png" alt="">
+                </div>
+                <div class="product-slider__brand">Tom Ford</div>
+                <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                <div class="product-slider__price">от <span>80 руб.</span></div>
+            </a>
+            <a href="#" class="products-slider-item">
+                <div class="product-slider__img">
+                    <div class="product-slider__label-sale">-30%</div>
+                    <img src="assets/images/Temp/sliders/pr-sl-2.png" alt="">
+                </div>
+                <div class="product-slider__brand">Tom Ford</div>
+                <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                <div class="product-slider__price">от <span>80 руб.</span></div>
+            </a>
+            <a href="#" class="products-slider-item sale">
+                <div class="product-slider__img">
+                    <div class="product-slider__label-sale">-30%</div>
+                    <img src="assets/images/Temp/sliders/pr-sl-3.png" alt="">
+                </div>
+                <div class="product-slider__brand">Tom Ford</div>
+                <div class="product-slider__title">Tom Ford CHAMPACA <br> ABSOLUTE Unisex</div>
+                <div class="product-slider__price">от <span>80 руб.</span></div>
+            </a>
+        </div>
+    </section>
+
+    <section class="articles-slider theme-bg_gray">
+        <div class="container articles-slider-container js_articles-slider">
+            <a href="#" class="articles-slider-item">
+                <div class="articles-slider__img">
+                    <img src="assets/images/Temp/sliders/nw-sli-1.jpg" alt="">
+                </div>
+
+                <div class="articles-slider__date">29 июл 2015</div>
+                <div class="articles-slider__title">Tom Ford CHAMPACA ABSOLUTE Unisex</div>
+                <div class="articles-slider__description">
+                    Наверняка и с вами такое случалось: парфюмерных пробников накопилось множество,
+                    а что с ними делать не совсем ясно. А ведь и у пробников есть свой срок годности.
+                </div>
+            </a>
+            <a href="#" class="articles-slider-item">
+                <div class="articles-slider__img">
+                    <img src="assets/images/Temp/sliders/nw-sli-2.jpg" alt="">
+                </div>
+
+                <div class="articles-slider__date">29 июл 2015</div>
+                <div class="articles-slider__title">Tom Ford CHAMPACA ABSOLUTE Unisex</div>
+                <div class="articles-slider__description">
+                    Наверняка и с вами такое случалось: парфюмерных пробников накопилось множество,
+                    а что с ними делать не совсем ясно. А ведь и у пробников есть свой срок годности.
+                </div>
+            </a>
+            <a href="#" class="articles-slider-item">
+                <div class="articles-slider__img">
+                    <img src="assets/images/Temp/sliders/nw-sli-3.jpg" alt="">
+                </div>
+
+                <div class="articles-slider__date">29 июл 2015</div>
+                <div class="articles-slider__title">Tom Ford CHAMPACA ABSOLUTE Unisex</div>
+                <div class="articles-slider__description">
+                    Наверняка и с вами такое случалось: парфюмерных пробников накопилось множество,
+                    а что с ними делать не совсем ясно. А ведь и у пробников есть свой срок годности.
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="brands-slider">
+        <div class="container brands-slider-container js_brands-slider">
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/armani.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/VERSACE.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/armani.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/VERSACE.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/armani.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+                </a></div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/VERSACE.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+                </a></div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/VERSACE.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/armani.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#" class="brands-slider-item">
+                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-container container">
+        <div class="footer-half-section">
+            <ul class="footer-nav">
+                <li><a href="#">ДОСТАВКА</a></li>
+                <li><a href="#">ПРЕДЗАКАЗ ТОВАРОВ</a></li>
+                <li><a href="#">ОПЛАТА</a></li>
+                <li><a href="#">АКЦИИ</a></li>
+                <li><a href="#">КОНТАКТЫ</a></li>
+            </ul>
+            <div class="footer-half__bottom">
+                <a href="#" class="footer-logo">
+                    <svg class="footer-logo__svg">
+                        <use xlink:href='#svg-logo' href='#svg-logo' />
+                    </svg>
+                </a>
+
+                <address class="footer-address">
+                    <div class="footer-address__phones">
+                        <a href="tel:+375293930707">(29) 393 07 07</a>
+                        <a href="tel:+375293930707">(29) 393 07 07</a>
+                    </div>
+                    <div class="footer-address__info">г.Минск, пер.Липковский, 34, 2 этаж, офис №69</div>
+                    <div class="footer-address__shcedule">9:00—17:00, без выходных</div>
+                </address>
+
+                <div class="footer-social">
+                    <a href="#" class="footer-social__insta">
+                        <svg class="footer-social__svg">
+                            <use xlink:href='#svg-insta' href='#svg-insta' />
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social__fb">
+                        <svg class="footer-social__svg">
+                            <use xlink:href='#svg-fb' href='#svg-fb' />
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social__vk">
+                        <svg class="footer-social__svg">
+                            <use xlink:href='#svg-vk' href='#svg-vk' />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-half-section">
+            <div class="footer-subscribe-info">Получать лучшие предложения, купоны, участвовать в акциях</div>
+            <form action="" method="post" name="footer-subscribe" class="footer-subscribe">
+                <input type="email" name="" placeholder="E-mail" class="footer-subscribe__email">
+                <span class="footer-subscribe__deliver">Я</span>
+                <select name="subscribe_sex" class="footer-subscribe__sex js_custom-select">
+                    <option value="Женщина">Женщина</option>
+                    <option value="Мужчина">Мужчина</option>
+                </select>
+                <input type="submit" value="Подписаться" class="footer-subscribe__submit">
+            </form>
+            <div class="footer-registration">
+                Свидетельство о регистрации Мингорисполкомом от 12 июля 2017 в Едином государственном регистре
+                юридических
+                лиц и индивидуальных предпринимателей №192941390 Внесен в торговый реестр 21 июля 2017г. №387851
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="up-btn">
+    <svg class="up-btn__svg">
+        <use xlink:href='#svg-toup' href='#svg-toup' />
+    </svg>
+</div>
+
+<svg style="display: none;">
+    <symbol id="svg-logo" viewBox="0 0 170 32">
+        <path d="M0.368125 2.59833V3.86037C3.75487 4.15732 4.123 4.38003 4.123 8.16616V26.0575C4.123 29.8436 3.75487 30.1406 0 30.3633V31.5511H10.4547C15.903 31.5511 20.2469 30.4375 23.56 27.8392C26.9467 25.2409 29.0082 21.3063 29.0082 15.9611C29.0819 12.3977 27.7566 8.90854 25.327 6.38446C22.6029 3.78613 18.4062 2.59833 12.8107 2.59833H0.368125ZM7.87787 7.20107C7.87787 5.4936 8.02512 4.97394 8.46687 4.67698C8.90862 4.38003 10.0866 4.15732 11.9272 4.15732C14.8722 4.15732 17.4491 4.67699 19.437 6.01327C22.971 8.09193 24.6644 12.1008 24.6644 16.6293C24.6644 23.7561 20.8359 29.9921 12.5899 29.9921C9.35037 29.9921 7.87787 29.1755 7.87787 25.7605V7.20107ZM49.1815 9.57668C47.4145 7.57226 44.8376 6.45869 42.1871 6.53293C39.463 6.45869 36.8861 7.49802 34.9719 9.42821C33.0576 11.4326 32.1005 14.1052 32.1741 16.9262C32.1005 19.673 33.2049 22.4198 35.1191 24.35C36.9597 26.3544 39.6102 27.468 42.3343 27.3938C44.9112 27.468 47.4145 26.3544 49.1078 24.4243C50.9485 22.4198 51.9792 19.8215 51.9056 17.1489C52.0528 14.3279 51.0957 11.6553 49.1815 9.57668ZM42.408 26.7999C40.5673 26.7999 38.874 25.8348 37.9905 24.2015C36.9597 22.4941 36.3707 20.1185 36.3707 17.0747C36.2971 14.9218 36.6652 12.7689 37.4015 10.7645C38.3586 8.38888 39.9047 7.20107 42.1135 7.20107C43.586 7.12683 44.9848 7.86921 45.7947 9.13126C47.1936 11.1357 47.8562 13.8082 47.8562 17.2974C47.8562 23.6076 46.0156 26.7999 42.408 26.7999ZM78.4842 29.1012C78.0424 29.027 77.6007 29.324 77.5271 29.7694C77.5271 29.8436 77.5271 29.9179 77.5271 29.9921C77.5271 30.289 77.6007 30.5118 77.7479 30.8087L77.8216 30.8829C77.8216 31.0314 77.6007 31.1799 77.159 31.1799C75.7601 31.1799 74.9502 29.9921 74.6557 27.5422C74.2876 23.2365 73.4777 20.2669 72.2997 18.5595C71.1217 16.852 68.9866 15.8127 65.8943 15.293C65.5998 15.293 65.4526 15.2188 65.4526 15.1445C65.5998 15.0703 65.7471 14.996 65.8943 14.996C68.324 14.9218 70.68 14.1052 72.5942 12.6204C74.214 11.4326 75.0975 9.50245 75.0975 7.49802C75.1711 5.4936 74.2876 3.63766 72.6678 2.44985C71.0481 1.18781 68.913 0.593903 66.1888 0.593903C65.7471 0.593903 64.8636 0.66814 63.6856 0.742378C62.6548 0.816616 61.7713 0.816616 61.1823 0.816616L55.2923 0.66814C55.1451 0.66814 54.9978 0.593903 54.9242 0.593903C54.4825 0.593903 54.188 0.742378 54.188 1.03933C54.188 1.33628 54.5561 1.41052 55.2923 1.41052C56.6176 1.48476 57.3538 1.63323 57.6483 1.85595C57.8692 2.07866 58.0165 2.82104 58.0165 4.00884V28.5816C58.0165 29.6209 57.9428 29.3982 57.8692 29.5467C57.722 29.9179 55.0715 30.4375 53.6726 30.4375C53.6726 30.9572 53.6726 31.4026 53.6726 31.9223H66.1888C66.1888 31.9223 66.2625 30.4375 66.1888 30.4375C64.7163 30.3633 62.3603 30.6602 62.3603 29.6209V15.59C64.7163 15.6642 66.3361 16.1096 67.3668 16.852C68.3976 17.5944 68.9866 19.0049 69.2075 20.8608C69.502 23.9788 69.7965 25.9833 69.9437 26.7256C70.1646 27.6165 70.5327 28.4331 71.0481 29.1012C72.2261 30.9572 74.2876 32.0708 76.4227 31.9965C78.4842 31.9965 79.5149 31.4026 79.5149 30.1406C79.5886 29.6209 79.2205 29.1012 78.7051 29.027C78.6314 29.1012 78.5578 29.1012 78.4842 29.1012ZM68.4712 13.1401C67.2196 14.1794 65.1581 14.6991 62.3603 14.6991V3.3407C62.2867 2.82104 62.5076 2.30137 62.8757 1.93018C63.4647 1.63323 64.201 1.48476 64.8636 1.55899C68.5448 1.55899 70.3118 3.71189 70.3118 7.94345C70.3855 10.3191 69.7228 12.0265 68.4712 13.1401ZM96.5959 21.0836C96.3014 21.0836 96.1542 21.3063 96.0806 21.7517C95.8597 24.2758 95.1971 25.6863 94.0191 26.0575C93.2828 26.2802 90.7059 26.3544 86.4357 26.4287V16.7778H87.5401C89.4543 16.7778 90.5587 16.9262 91.0004 17.2232C91.4422 17.5201 91.6631 18.4852 91.8839 20.1185C91.9576 20.8608 92.1784 21.232 92.3993 21.232C92.6938 21.232 92.8411 21.0093 92.8411 20.4897C92.8411 20.3412 92.8411 20.1185 92.8411 19.8957C92.7674 19.1534 92.7674 17.8913 92.7674 15.9611C92.7674 15.59 92.7674 14.996 92.8411 14.2537C92.9147 13.5113 92.9147 12.9916 92.9147 12.6204C92.9147 12.0265 92.7674 11.7296 92.4729 11.7296C92.1784 11.7296 92.0312 12.175 91.9576 12.9916C91.8103 14.4021 91.5158 15.2188 91.0741 15.59C90.6323 15.8869 89.4543 16.0354 87.6137 16.0354H86.5829V7.72074H88.7917C90.3378 7.6465 91.8839 7.72074 93.3564 8.01769C94.5344 8.38888 95.2707 9.72516 95.7124 11.9523C95.8597 12.5462 96.0069 12.8432 96.3014 12.8432C96.5223 12.8432 96.5959 12.6204 96.5959 12.2492C96.5959 12.1008 96.5959 11.8781 96.5223 11.7296C96.3751 9.50245 96.2278 8.2404 96.1542 7.79498L96.0806 7.12683V6.82988H80.9138C80.5457 6.82988 80.4721 6.97836 80.4721 7.20107C80.4721 7.42379 80.4721 7.49802 80.8402 7.49802C81.3556 7.49802 81.8709 7.49802 82.3863 7.57226C82.6072 7.6465 82.6808 8.31464 82.6808 9.50245V24.7954C82.7544 25.3151 82.6808 25.8348 82.4599 26.2802C81.9446 26.5029 81.3556 26.5772 80.8402 26.5029C80.4721 26.5029 80.3248 26.6514 80.3248 26.8741C80.3248 27.0968 80.6193 27.2453 81.2819 27.2453L89.7488 27.0968L97.1113 27.2453C97.0377 26.9483 96.9641 26.6514 96.9641 26.3544V23.7561C96.9641 23.4592 96.9641 23.1622 97.0377 22.791C97.1113 22.4198 97.1113 22.2714 97.1113 22.1971C97.0377 21.529 96.8904 21.0836 96.5959 21.0836ZM126.267 28.3589V7.57226C126.267 4.3058 126.34 2.52409 126.488 2.37561C126.856 1.93018 127.371 1.70747 127.96 1.63323C128.549 1.55899 129.065 1.55899 129.654 1.55899C130.169 1.55899 130.39 1.41052 130.39 1.11357C130.39 0.965092 130.316 0.816616 130.169 0.742378C129.654 0.593903 129.065 0.593903 128.549 0.593903L122.07 0.66814C121.849 1.26204 121.555 1.93018 121.26 2.82104L116.548 17.5201C115.959 19.3761 115.37 21.3063 114.781 23.2365C111.689 14.6249 109.775 9.42821 109.112 7.6465C107.566 3.3407 106.683 1.03933 106.535 0.66814C105.799 0.66814 104.547 0.66814 102.854 0.66814H99.7618C98.8783 0.66814 98.4366 0.816616 98.4366 1.18781C98.4366 1.41052 98.6574 1.55899 99.1728 1.55899C99.9827 1.55899 100.866 1.70747 101.676 1.93018C102.044 2.07866 102.339 2.37561 102.412 2.7468C102.486 2.96951 102.486 4.3058 102.486 6.75565V28.1362C102.486 29.4724 102.265 29.9921 102.339 29.6951C102.339 30.3633 100.866 30.4375 98.5838 30.4375C98.8783 30.4375 98.6574 31.9223 98.5838 31.9223C98.5838 31.9223 106.02 31.9223 107.419 31.9223C107.492 31.4026 107.492 30.9572 107.419 30.4375C105.357 30.5118 103.958 30.1406 103.958 29.3982C103.885 29.324 103.811 27.3195 103.811 21.9002V7.42379C103.811 6.45869 103.811 5.64208 103.811 5.12241L105.578 9.87364C109.554 20.6381 111.91 27.3938 112.793 30.1406C113.014 30.8829 113.235 31.1799 113.456 31.1799C113.603 31.1799 113.898 30.5118 114.34 29.1012L116.401 22.0486C118.683 14.8476 120.377 9.42821 121.555 5.86479C121.923 4.82546 122.07 4.3058 122.07 4.3058V27.3938C122.07 29.2497 121.997 29.4724 121.849 29.6209C121.555 29.9179 120.671 30.5118 118.463 30.5118C118.389 31.0314 118.389 31.4769 118.463 31.9965H130.243C130.095 31.9965 130.463 30.5118 130.243 30.5118C125.899 30.0663 126.267 29.6951 126.267 28.3589ZM140.108 26.5029C139.593 26.5029 139.078 26.4287 138.562 26.2802C138.341 26.206 138.194 25.9833 138.268 25.6863V8.90854C138.194 8.46312 138.268 8.09193 138.415 7.72074C138.636 7.57226 138.93 7.49802 139.151 7.49802C140.182 7.49802 140.624 7.34955 140.624 7.20107C140.624 6.97836 140.403 6.82988 139.887 6.82988H132.599C132.23 6.82988 132.01 6.90412 132.01 7.12683C132.01 7.27531 132.157 7.42379 132.304 7.42379H132.378H133.703C133.997 7.42379 134.218 7.49802 134.366 7.79498C134.439 8.46312 134.513 9.13126 134.439 9.87364V24.35C134.439 25.0182 134.439 25.6121 134.366 26.2802C134.292 26.4287 133.85 26.5029 132.967 26.5772C132.304 26.5772 132.01 26.7256 132.01 26.9483C132.01 27.0968 132.23 27.1711 132.746 27.1711H140.182C140.476 27.1711 140.55 27.0968 140.55 26.8741C140.624 26.6514 140.403 26.5772 140.108 26.5029Z"/>
+        <path d="M157.778 10.0221C158.662 9.87363 159.324 9.13125 159.398 8.2404C159.398 7.72073 159.177 7.20107 158.735 6.90412C158.22 6.60716 157.557 6.45869 156.968 6.53293H153.95V6.82988C154.907 6.90411 154.907 6.97835 154.907 7.94344V12.6947C154.907 13.6598 154.833 13.734 153.802 13.8082V14.1052H156.379C157.189 14.1794 157.999 13.9567 158.662 13.6598C159.324 13.3628 159.766 12.6204 159.766 11.8781C159.913 10.7645 158.956 10.2448 157.778 10.0221ZM155.938 9.94787V7.64649C155.864 7.42378 155.938 7.20107 156.085 7.05259C156.306 6.97835 156.527 6.90412 156.747 6.90412C157.557 6.82988 158.22 7.34954 158.294 8.16616C158.294 8.2404 158.294 8.31463 158.294 8.46311C158.294 9.4282 157.778 9.94787 156.453 9.94787H155.938ZM155.938 10.3191H156.453C157.925 10.3191 158.735 10.8387 158.735 12.1008C158.809 12.9916 158.073 13.8082 157.189 13.8825C157.116 13.8825 157.042 13.8825 156.895 13.8825C156.158 13.8825 155.938 13.6598 155.938 12.7689V10.3191ZM167.644 6.53293H165.067V6.82988C165.951 6.90411 166.024 7.05259 165.73 7.64649C165.435 8.38887 164.773 9.50244 164.331 10.3191C163.815 9.4282 163.226 8.46311 162.785 7.49802C162.564 7.12683 162.564 6.97835 163.374 6.82988V6.53293H160.576V6.82988C161.312 6.90411 161.386 7.05259 161.901 7.86921C162.564 8.98278 163.006 9.72515 163.374 10.4675C163.521 10.6902 163.595 10.913 163.595 11.1357V12.6947C163.595 13.734 163.521 13.8082 162.417 13.8825V14.1794H165.73V13.8825C164.625 13.8082 164.552 13.734 164.552 12.6947V11.1357C164.552 10.8387 164.625 10.616 164.773 10.3933C165.362 9.35396 165.73 8.68582 166.245 7.79497C166.466 7.20107 167.055 6.82988 167.644 6.82988V6.53293Z"/>
+        <path d="M169.926 9.05702L168.527 9.35397C168.527 9.65092 168.601 10.0221 168.601 10.3191C168.601 15.293 164.625 19.3018 159.693 19.3018C154.76 19.3018 150.784 15.293 150.784 10.3191C150.784 5.34513 154.76 1.33628 159.693 1.33628C162.196 1.33628 164.552 2.44985 166.098 4.15732L167.276 3.3407C165.435 1.33628 162.711 0 159.693 0C154.023 0 149.385 4.67699 149.385 10.3933C149.385 16.1096 154.023 20.7866 159.693 20.7866C165.362 20.7866 170 16.1096 170 10.3933C170 9.94787 170 9.50245 169.926 9.05702Z"/>
+    </symbol>
+    <symbol id="svg-nav-male" viewBox="0 0 14 14">
+        <path d="M13.4815 0H8.8321C8.53826 0 8.31359 0.224697 8.31359 0.518504C8.31359 0.81231 8.53829 1.03701 8.8321 1.03701H12.237L8.76299 4.51111C7.82966 3.75061 6.65434 3.28395 5.35806 3.28395C2.40246 3.28395 0 5.68644 0 8.64197C0 11.5975 2.40246 14 5.35803 14C8.31359 14 10.7161 11.5975 10.7161 8.64197C10.7161 7.34566 10.2494 6.17037 9.48889 5.23704L12.963 1.76297V5.1679C12.963 5.46174 13.1877 5.6864 13.4815 5.6864C13.7753 5.6864 14 5.46171 14 5.1679V0.518504C14 0.224697 13.7753 0 13.4815 0ZM5.35803 12.963C2.97284 12.963 1.03704 11.0272 1.03704 8.64201C1.03704 6.25682 2.97284 4.32102 5.35803 4.32102C7.74322 4.32102 9.67901 6.25682 9.67901 8.64201C9.67901 11.0272 7.74322 12.963 5.35803 12.963Z"/>
+    </symbol>
+    <symbol id="svg-nav-female" viewBox="0 0 14 14">
+        <path d="M8.5135 0C5.48819 0 3.02701 2.46118 3.02701 5.4865C3.02701 8.51164 5.48819 10.973 8.5135 10.973C11.5388 10.973 14 8.51162 14 5.4865C14 2.46118 11.5388 0 8.5135 0ZM8.5135 9.94104C6.05732 9.94104 4.05896 7.94287 4.05896 5.4865C4.05896 3.03032 6.05732 1.03195 8.5135 1.03195C10.9697 1.03195 12.968 3.03029 12.968 5.4865C12.968 7.94284 10.9697 9.94104 8.5135 9.94104Z"/>
+        <path d="M5.3697 8.63028C5.16829 8.4287 4.84153 8.4287 4.64011 8.63028L0.426361 12.844C0.224782 13.0454 0.224782 13.3722 0.426361 13.5736C0.526986 13.6744 0.659056 13.7248 0.791154 13.7248C0.923251 13.7248 1.05532 13.6744 1.15595 13.5736L5.3697 9.35986C5.57128 9.15848 5.57128 8.83169 5.3697 8.63028Z"/>
+        <path d="M5.09452 13.1192L0.880769 8.90549C0.679383 8.70391 0.352598 8.70391 0.151184 8.90549C-0.0503945 9.1069 -0.0503945 9.43366 0.151184 9.63507L4.36494 13.8488C4.46556 13.9496 4.59763 14 4.72973 14C4.86183 14 4.9939 13.9496 5.09452 13.8488C5.2961 13.6474 5.2961 13.3207 5.09452 13.1192Z"/>
+    </symbol>
+    <symbol id="svg-nav-brands" viewBox="0 0 14 14">
+        <path d="M7 0C3.14015 0 0 3.14015 0 7C0 10.8598 3.14015 14 7 14C10.8598 14 14 10.8598 14 7C14 3.14015 10.8598 0 7 0ZM7 13.0894C3.64235 13.0894 0.910688 10.3577 0.910688 7C0.910688 3.64229 3.64235 0.910688 7 0.910688C10.3577 0.910688 13.0893 3.64235 13.0893 7C13.0893 10.3577 10.3577 13.0894 7 13.0894Z"/>
+        <path d="M9.85556 8.14067C9.64368 8.00523 9.36212 8.06711 9.22658 8.27889C8.78672 8.96661 8.03748 9.37718 7.22236 9.37718C5.91158 9.37718 4.84521 8.31077 4.84521 6.99998C4.84521 5.6892 5.91158 4.62278 7.22236 4.62278C8.01329 4.62278 8.75029 5.01473 9.1939 5.67124C9.33465 5.87953 9.61762 5.93438 9.82612 5.79357C10.0345 5.65282 10.0893 5.36975 9.94845 5.16136C9.33536 4.25385 8.3162 3.7121 7.22236 3.7121C5.40943 3.7121 3.93452 5.18701 3.93452 6.99998C3.93452 8.81296 5.40943 10.2879 7.22236 10.2879C8.34964 10.2879 9.3857 9.72031 9.99378 8.7696C10.1293 8.55776 10.0674 8.27621 9.85556 8.14067Z"/>
+    </symbol>
+    <symbol id="svg-nav-sales" viewBox="0 0 14 14">
+        <path d="M13.9194 6.73113L13.0314 5.38438L13.1202 3.77098C13.1307 3.57741 13.0257 3.39574 12.8527 3.30833L11.4172 2.58309L10.6918 1.14729C10.6042 0.974065 10.4226 0.870378 10.229 0.879812L8.61558 0.968706L7.269 0.0806976C7.1059 -0.0268992 6.89442 -0.0268992 6.73132 0.0806976L5.38457 0.968706L3.77117 0.879812C3.57484 0.869722 3.39577 0.974065 3.30835 1.14729L2.58312 2.58309L1.14731 3.30833C0.974255 3.39574 0.869256 3.57741 0.879838 3.77114L0.968732 5.38455L0.0806975 6.7313C-0.0268992 6.8944 -0.0268992 7.10588 0.0806975 7.26898L0.968705 8.61557L0.879811 10.229C0.869229 10.4227 0.974228 10.6044 1.14728 10.6918L2.58309 11.4172L3.30832 12.8527C3.39574 13.026 3.57839 13.1302 3.77097 13.1201L5.38438 13.0314L6.73113 13.9194C6.81269 13.9731 6.90629 14 6.99989 14C7.09348 14 7.18708 13.9731 7.26897 13.9193L8.61556 13.0312L10.229 13.12C10.4225 13.1304 10.6042 13.0259 10.6918 12.8525L11.4172 11.417L12.8526 10.6916C13.0258 10.6042 13.1307 10.4224 13.1201 10.2288L13.0314 8.6154L13.9194 7.26882C14.0269 7.10571 14.0269 6.89427 13.9194 6.73113ZM12.1268 8.21269C12.0693 8.30011 12.0411 8.40363 12.047 8.50833L12.127 9.96399L10.8331 10.6177C10.74 10.6648 10.6645 10.7403 10.6174 10.8334L9.96367 12.1273L8.50802 12.0473C8.40252 12.0424 8.2998 12.0695 8.21238 12.1271L6.99991 12.9266L5.78728 12.1271C5.70736 12.0745 5.61393 12.0465 5.51852 12.0465C5.50958 12.0465 5.50061 12.0469 5.49167 12.0472L4.03602 12.1271L3.38226 10.8333C3.3352 10.7402 3.25968 10.6646 3.16657 10.6176L1.87257 9.96382L1.95266 8.50816C1.95835 8.40366 1.93035 8.29994 1.87274 8.21252L1.07324 7.00006L1.87287 5.78743C1.93051 5.70001 1.95851 5.59649 1.9528 5.49179L1.87271 4.03629L3.16671 3.38254C3.25982 3.33548 3.33537 3.25996 3.3824 3.16685L4.03615 1.87285L5.49165 1.95294C5.59697 1.95928 5.69987 1.93079 5.78728 1.87301L6.99991 1.07354L8.21254 1.87285C8.29979 1.93046 8.40365 1.95849 8.50818 1.95277L9.96384 1.87268L10.6176 3.16669C10.6647 3.25979 10.7402 3.33534 10.8333 3.38237L12.1271 4.03613L12.0472 5.49179C12.0413 5.5963 12.0693 5.70001 12.127 5.78743L12.9264 7.00006L12.1268 8.21269Z"/>
+        <path d="M4.96504 3.41873C4.02265 3.41873 3.25574 4.18547 3.25574 5.12803C3.25574 6.07059 4.02265 6.83733 4.96504 6.83733C5.9076 6.83733 6.67434 6.07042 6.67434 5.12803C6.67434 4.18564 5.90743 3.41873 4.96504 3.41873ZM4.96504 5.86056C4.56115 5.86056 4.23248 5.53189 4.23248 5.128C4.23248 4.72411 4.56115 4.39544 4.96504 4.39544C5.3691 4.39544 5.6976 4.72411 5.6976 5.128C5.6976 5.53189 5.3689 5.86056 4.96504 5.86056Z"/>
+        <path d="M8.87198 7.32562C7.92942 7.32562 7.16268 8.09236 7.16268 9.03492C7.16268 9.97748 7.92942 10.7442 8.87198 10.7442C9.81454 10.7442 10.5813 9.97748 10.5813 9.03492C10.5813 8.09236 9.81451 7.32562 8.87198 7.32562ZM8.87198 9.76748C8.46809 9.76748 8.13942 9.43881 8.13942 9.03492C8.13942 8.63103 8.46809 8.30236 8.87198 8.30236C9.27603 8.30236 9.60454 8.63103 9.60454 9.03492C9.60451 9.43881 9.27584 9.76748 8.87198 9.76748Z"/>
+        <path d="M10.1289 3.8711C9.93811 3.6803 9.62913 3.6803 9.43833 3.8711L3.87092 9.43851C3.68014 9.62913 3.68014 9.93844 3.87092 10.1291C3.96616 10.2245 4.09117 10.2722 4.21618 10.2722C4.3412 10.2722 4.46624 10.2245 4.56145 10.1291L10.1288 4.56169C10.3197 4.37105 10.3197 4.06174 10.1289 3.8711Z"/>
+    </symbol>
+    <symbol id="svg-header-basket" viewBox="0 0 15 16">
+        <path d="M5.14816 12.345C4.14742 12.345 3.33337 13.1648 3.33337 14.1725C3.33337 15.1803 4.14745 16 5.14816 16C6.1489 16 6.96295 15.18 6.96295 14.1725C6.96295 13.165 6.1489 12.345 5.14816 12.345ZM5.14816 14.8813C4.76019 14.8813 4.44447 14.5636 4.44447 14.1727C4.44447 13.7818 4.76019 13.4641 5.14816 13.4641C5.53632 13.4641 5.85186 13.7818 5.85186 14.1727C5.85186 14.5636 5.53632 14.8813 5.14816 14.8813Z"/>
+        <path d="M11.7408 12.345C10.7399 12.345 9.92587 13.1648 9.92587 14.1725C9.92587 15.1803 10.74 16 11.7408 16C12.7414 16 13.5556 15.1802 13.5556 14.1725C13.5556 13.1648 12.7414 12.345 11.7408 12.345ZM11.7408 14.8811C11.3527 14.8811 11.037 14.5632 11.037 14.1725C11.037 13.7818 11.3527 13.4641 11.7408 13.4641C12.1288 13.4641 12.4445 13.7816 12.4445 14.1725C12.4445 14.5634 12.129 14.8811 11.7408 14.8811Z"/>
+        <path d="M4.35185 11.7857H12.9999C13.3069 11.7857 13.5555 11.5353 13.5555 11.2263C13.5555 10.9173 13.3068 10.6669 12.9999 10.6669H4.82426L3.23371 0.842501C3.19557 0.607156 3.01372 0.422187 2.78057 0.381343L0.650956 0.0083739C0.347798 -0.044595 0.0609636 0.159249 0.00836321 0.463562C-0.0444233 0.768094 0.158189 1.05769 0.460385 1.11066L2.20054 1.41538L3.80347 11.3162C3.84741 11.5871 4.07944 11.7857 4.35185 11.7857Z"/>
+        <path d="M14.8932 3.62404C14.7886 3.47951 14.6219 3.3941 14.4443 3.3941H3.14813V4.51298H13.6823L12.5395 8.0934H3.94443V9.21227H12.9445C13.1856 9.21227 13.3995 9.05524 13.4734 8.82402L14.9734 4.1247C15.0277 3.95448 14.9978 3.76839 14.8932 3.62404Z"/>
+    </symbol>
+    <symbol id="svg-right-arrow" viewBox="0 0 14 12">
+        <path d="M13.3246 5.44448H0.563016C0.252058 5.44448 0 5.69336 0 6.00004C0 6.30671 0.252031 6.55559 0.563016 6.55559H13.3246C13.6355 6.55559 13.8876 6.3069 13.8876 6.00004C13.8876 5.69317 13.6356 5.44448 13.3246 5.44448Z"/>
+        <path d="M13.835 5.60707L8.31772 0.16264C8.09777 -0.0542134 7.74158 -0.0542134 7.52163 0.16264C7.30167 0.379682 7.30167 0.731526 7.52163 0.94838L12.6409 6.00001L7.52163 11.0517C7.30167 11.2685 7.30167 11.6204 7.52163 11.8372C7.6316 11.9457 7.77554 12 7.91967 12C8.06381 12 8.20775 11.9457 8.31772 11.8372L13.835 6.39281C14.055 6.17577 14.055 5.8239 13.835 5.60707Z"/>
+    </symbol>
+    <symbol id="svg-magnifier" viewBox="0 0 16 16">
+        <path d="M7.04606 0C3.16097 0 0 3.16097 0 7.04606C0 10.9314 3.16097 14.0921 7.04606 14.0921C10.9314 14.0921 14.0921 10.9314 14.0921 7.04606C14.0921 3.16097 10.9314 0 7.04606 0ZM7.04606 12.7913C3.87815 12.7913 1.30081 10.214 1.30081 7.04609C1.30081 3.87819 3.87815 1.30081 7.04606 1.30081C10.214 1.30081 12.7913 3.87816 12.7913 7.04606C12.7913 10.214 10.214 12.7913 7.04606 12.7913Z"/>
+        <path d="M15.8094 14.8898L12.0804 11.1608C11.8263 10.9067 11.4148 10.9067 11.1608 11.1608C10.9067 11.4146 10.9067 11.8266 11.1608 12.0804L14.8898 15.8094C15.0168 15.9365 15.1831 16 15.3496 16C15.5159 16 15.6824 15.9365 15.8094 15.8094C16.0635 15.5556 16.0635 15.1436 15.8094 14.8898Z"/>
+    </symbol>
+    <symbol id="svg-close" viewBox="0 0 17 18">
+        <path d="M1 17L15.9999 0.999999"/>
+        <path d="M16 17L1.00012 0.999999"/>
+    </symbol>
+    <symbol id="svg-telegram" viewBox="0 0 16 16">
+        <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z"
+              fill="#47B0D3"/>
+        <path d="M1.06666 8C1.06666 3.761 4.36378 0.292625 8.53331 0.0180937C8.357 0.0065 8.17928 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16C8.17928 16 8.357 15.9935 8.53334 15.9819C4.36381 15.7074 1.06666 12.239 1.06666 8Z"
+              fill="#3298BA"/>
+        <path d="M11.8832 3.40794C11.8055 3.35513 11.7059 3.34713 11.6208 3.38672L3.02429 7.38854C2.87326 7.45888 2.77782 7.61266 2.7816 7.77919C2.78526 7.94251 2.8841 8.08919 3.03363 8.15466L10.959 11.6064C11.2237 11.7267 11.5353 11.5374 11.5523 11.2485L11.9996 3.64413C12.005 3.55044 11.9609 3.46069 11.8832 3.40794Z"
+              fill="#E5E5E5"/>
+        <path d="M5.36346 9.16939L5.89912 12.75L11.849 3.38849L5.36346 9.16939Z" fill="#CCCCCC"/>
+        <path d="M11.6208 3.38673L3.0243 7.38854C2.87627 7.45744 2.77974 7.61107 2.78152 7.77432C2.78333 7.93785 2.88389 8.08913 3.03361 8.15466L5.36352 9.16938L11.849 3.38851C11.7776 3.35407 11.6939 3.35273 11.6208 3.38673Z"
+              fill="white"/>
+        <path d="M6.60683 9.71089L5.89914 12.75L11.849 3.38849L6.60683 9.71089Z" fill="#E5E5E5"/>
+        <path d="M11.8832 3.40793C11.8722 3.40046 11.8607 3.39411 11.849 3.38849L6.60681 9.71089L10.959 11.6064C11.2236 11.7267 11.5352 11.5374 11.5522 11.2485L11.9995 3.64411C12.005 3.55043 11.9609 3.46068 11.8832 3.40793Z"
+              fill="white"/>
+    </symbol>
+    <symbol id="svg-viber" viewBox="0 0 16 16">
+        <path d="M8.55557 0H5.44446C2.44234 0 0 2.51243 0 5.60071V8.00102C0 10.1692 1.21555 12.1368 3.11111 13.0623V15.7353C3.11111 15.9674 3.39336 16.0888 3.55369 15.9239L5.81106 13.6017H8.55554C11.5576 13.6017 14 11.0893 14 8.00102V5.60071C14 2.51243 11.5576 0 8.55557 0Z"
+              fill="#665CAC"/>
+        <path d="M3.88889 13.0623C1.99332 12.1367 0.777771 10.1691 0.777771 8.00099V5.60068C0.777771 2.51243 3.22014 0 6.22223 0H5.44446C2.44234 0 0 2.51243 0 5.60071V8.00102C0 10.1692 1.21555 12.1368 3.11111 13.0623V15.7353C3.11111 15.9674 3.39336 16.0888 3.55369 15.9239L3.88889 15.5791V13.0623Z"
+              fill="#523494"/>
+        <path d="M10.9142 9.94064L10.6811 8.6417C10.6618 8.53439 10.581 8.44999 10.477 8.42858L8.64378 8.05142C8.55863 8.03399 8.4709 8.06133 8.40957 8.12436L7.66479 8.89055C6.40993 8.31214 5.71348 7.59414 5.10069 6.24786L5.84307 5.48421C5.90435 5.42115 5.93096 5.33071 5.91398 5.24327L5.54734 3.3574C5.52653 3.25043 5.44448 3.16724 5.34016 3.14743L4.07747 2.90768C4.0429 2.90115 4.00729 2.90184 3.97296 2.90987C3.63956 2.98777 3.33536 3.16059 3.09321 3.40974C2.67394 3.84105 2.51369 4.47043 2.62986 5.22983C2.82485 6.50502 3.43217 8.27964 4.55267 9.43692L4.56798 9.45255C5.69209 10.6044 7.41724 11.2292 8.65691 11.4298C8.81308 11.4551 8.96348 11.4677 9.10772 11.4677C9.64526 11.4677 10.0956 11.2932 10.4263 10.9531C10.6684 10.704 10.8365 10.3911 10.9122 10.0482C10.9199 10.0128 10.9206 9.97626 10.9142 9.94064Z"
+              fill="white"/>
+        <path d="M5.58957 5.74495L5.84304 5.48417L5.84332 5.48389L5.58954 5.74492L5.58957 5.74495Z" fill="#E5E5E5"/>
+        <path d="M8.40959 8.12408L8.15363 8.38739L8.15367 8.38743L8.40963 8.12413L8.40959 8.12408Z" fill="#E5E5E5"/>
+        <path d="M9.5965 10.9647C9.45227 10.9647 9.30186 10.9522 9.14569 10.9269C7.90605 10.7262 6.18091 10.1014 5.05676 8.94959L5.04145 8.93397C3.92096 7.77669 3.31364 6.00206 3.11864 4.72688C3.0248 4.11335 3.11156 3.58476 3.36944 3.17685C3.27068 3.24463 3.178 3.32238 3.09309 3.40972C2.67381 3.84104 2.51357 4.47041 2.62973 5.22982C2.82473 6.505 3.43205 8.27962 4.55255 9.4369L4.56786 9.45253C5.69197 10.6044 7.41711 11.2292 8.65678 11.4298C8.81296 11.4551 8.96336 11.4677 9.1076 11.4677C9.64514 11.4677 10.0955 11.2932 10.4262 10.9531C10.511 10.8658 10.5866 10.7705 10.6525 10.6689C10.3598 10.8647 10.0031 10.9647 9.5965 10.9647Z"
+              fill="#E5E5E5"/>
+        <path d="M7.51852 4.53391C7.37535 4.53391 7.25928 4.65331 7.25928 4.80059C7.25928 4.94787 7.37535 5.06728 7.51852 5.06728C8.09036 5.06728 8.55557 5.54584 8.55557 6.13409C8.55557 6.2794 8.67356 6.40078 8.81482 6.40078C8.95608 6.40078 9.07407 6.2794 9.07407 6.13409C9.0741 5.25172 8.37628 4.53391 7.51852 4.53391Z"
+              fill="white"/>
+        <path d="M7.51853 3.4671C7.42263 3.4671 7.32584 3.47257 7.23082 3.48335C7.0885 3.49951 6.98585 3.63129 7.00156 3.77773C7.01726 3.92416 7.14564 4.02948 7.28772 4.01357C7.36391 4.00491 7.44155 4.00051 7.51853 4.00051C8.66218 4.00051 9.5926 4.95763 9.5926 6.1341C9.5926 6.21332 9.58831 6.29319 9.5799 6.37157C9.56441 6.51597 9.66873 6.65004 9.80916 6.66594C9.94957 6.68185 10.0798 6.57457 10.0953 6.4301C10.1058 6.33235 10.1111 6.23279 10.1111 6.1341C10.1111 4.66354 8.9481 3.4671 7.51853 3.4671Z"
+              fill="white"/>
+        <path d="M7.51898 2.4003C7.42632 2.4003 7.33248 2.40392 7.24014 2.41114C7.09736 2.42227 6.99037 2.55039 7.00118 2.69724C7.01196 2.84411 7.13694 2.95417 7.27929 2.94305C7.35867 2.93683 7.43932 2.9337 7.51898 2.9337C9.23446 2.9337 10.6301 4.36939 10.6301 6.13411C10.6301 6.38379 10.6021 6.63236 10.5469 6.87286C10.5152 7.01067 10.5977 7.15392 10.7305 7.19136C10.8703 7.23073 11.0182 7.14057 11.0515 6.99554C11.1159 6.71489 11.1486 6.42508 11.1486 6.13411C11.1486 4.07527 9.52038 2.4003 7.51898 2.4003Z"
+              fill="white"/>
+    </symbol>
+    <symbol id="svg-insta" viewBox="0 0 16 16">
+        <path d="M10.4653 0H4.50405C2.03124 0 0 2.16471 0 4.8V11.2471C0 13.8353 2.03124 16 4.50405 16H10.5536C12.9823 16 15.0135 13.8353 15.0135 11.2V4.8C14.9694 2.16471 12.9381 0 10.4653 0ZM13.468 11.2C13.468 12.9412 12.1874 14.3059 10.5536 14.3059H4.50405C2.87023 14.3059 1.58967 12.9412 1.58967 11.2V4.8C1.58967 3.05882 2.87023 1.69412 4.50405 1.69412H10.5536C12.1874 1.69412 13.468 3.05882 13.468 4.8V11.2Z" />
+        <path d="M7.4626 3.85889C5.29889 3.85889 3.62091 5.74124 3.62091 7.953C3.62091 10.1648 5.38721 12.0471 7.4626 12.0471C9.538 12.0471 11.3043 10.1648 11.3043 7.953C11.3043 5.74124 9.62632 3.85889 7.4626 3.85889ZM7.4626 10.5412C6.18204 10.5412 5.12226 9.41183 5.12226 8.04712C5.12226 6.68242 6.18204 5.553 7.4626 5.553C8.74317 5.553 9.80295 6.68242 9.80295 8.04712C9.80295 9.36477 8.78733 10.5412 7.4626 10.5412Z" />
+        <path d="M11.3926 4.84708C11.9047 4.84708 12.3199 4.40463 12.3199 3.85884C12.3199 3.31305 11.9047 2.87061 11.3926 2.87061C10.8805 2.87061 10.4653 3.31305 10.4653 3.85884C10.4653 4.40463 10.8805 4.84708 11.3926 4.84708Z" />
+    </symbol>
+    <symbol id="svg-fb" viewBox="0 0 8 16">
+        <path d="M5.0045 16H1.68333V8H0V5.22353H1.68333V3.57647C1.68333 1.31765 2.63874 0 5.27748 0H7.50676V2.77647H6.0964C5.05 2.77647 5.0045 3.15294 5.0045 3.85882V5.22353H7.50676L7.23378 8H5.0045V16Z" />
+    </symbol>
+    <symbol id="svg-vk" viewBox="0 0 22 14">
+        <path d="M19.4579 5.40028C17.3435 8.48381 17.0947 8.14864 18.836 9.95854C20.5151 11.6344 20.8882 12.5058 20.9504 12.5728C20.9504 12.5728 21.6344 13.9135 20.1419 13.9135L17.3435 13.9805C16.7216 14.1146 15.9132 13.5113 15.9132 13.5113C14.856 12.7069 13.861 10.6959 13.1147 10.964C13.1147 10.964 12.3063 11.2322 12.3685 13.0421C12.3685 13.4443 12.1819 13.6454 12.1819 13.6454C12.1819 13.6454 11.9953 13.8465 11.6222 13.9135H10.3784C7.58 14.1146 5.15468 11.3662 5.15468 11.3662C5.15468 11.3662 2.41841 8.34974 0.055278 2.38379C-0.0690975 1.98159 0.055278 1.78049 0.055278 1.78049C0.055278 1.78049 0.241841 1.57939 0.677156 1.57939H3.66217C3.97311 1.64642 4.15967 1.78049 4.15967 1.78049C4.15967 1.78049 4.34623 1.91456 4.47061 2.11565C4.96811 3.45632 5.58999 4.66292 5.58999 4.66292C6.70937 7.07611 7.45562 7.54534 7.89094 7.27721C7.89094 7.27721 8.45063 6.94204 8.32625 3.92555C8.26406 2.85302 8.01531 2.38379 8.01531 2.38379C7.76656 2.04862 7.26906 1.91456 7.0825 1.84752C6.89593 1.84752 7.20687 1.37829 7.58 1.17719C8.13969 0.909058 9.0725 0.909058 10.1919 0.909058C11.0625 0.909058 11.3113 0.976091 11.6844 1.04312C12.7416 1.31126 12.3685 2.38379 12.3685 4.86402C12.3685 5.66841 12.2441 6.80798 12.7416 7.14314C12.9903 7.27721 13.55 7.14314 14.9803 4.59588C14.9803 4.59588 15.6644 3.38929 16.1619 1.91456C16.2241 1.64642 16.4107 1.57939 16.4107 1.57939C16.4107 1.57939 16.5972 1.44532 16.846 1.51236H20.0175C20.9504 1.44532 21.1369 1.91456 21.1369 1.91456C21.2613 2.38379 20.7638 3.52335 19.4579 5.40028Z" />
+    </symbol>
+    <symbol id="svg-toup" viewBox="0 0 50 50">
+        <circle cx="25" cy="25" r="25" fill="#07080C"/>
+        <path d="M25.8911 20.3598L33.6306 27.9029C34.1231 28.3827 34.1231 29.1607 33.6306 29.6403C33.1384 30.1199 32.3402 30.1199 31.8481 29.6403L24.9999 22.9658L18.1519 29.6401C17.6595 30.1197 16.8614 30.1197 16.3693 29.6401C15.8769 29.1604 15.8769 28.3825 16.3693 27.9027L24.1088 20.3596C24.355 20.1198 24.6774 20 24.9998 20C25.3225 20 25.645 20.12 25.8911 20.3598Z" fill="white"/>
+    </symbol>
+
+    <symbol id="new" viewBox="0 0 16 16"></symbol>
+</svg>
+
+<script src="assets/js/libs.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
