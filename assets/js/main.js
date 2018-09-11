@@ -1,14 +1,22 @@
 'use strict';
 
 $(document).ready(function () {
+    getWindowWidth();
+
     //sliders
-    productSliderInit();
+    //productSliderInit();
 
     $('.js_articles-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
-        arrows: true
+        arrows: true,
+        responsive: [{
+            breakpoint: 1025,
+            settings: {
+                arrows: false
+            }
+        }]
     });
 
     $('.js_brands-slider').slick({
@@ -16,7 +24,20 @@ $(document).ready(function () {
         slidesToScroll: 1,
         infinite: true,
         arrows: true,
-        rows: 2
+        rows: 2,
+        responsive: [{
+            breakpoint: 1201,
+            settings: {
+                slidesToShow: 6
+            }
+        }, {
+            breakpoint: 1025,
+            settings: {
+                slidesToShow: 5,
+                rows: 1,
+                arrows: false
+            }
+        }]
     });
 
     //custom select
@@ -45,38 +66,69 @@ $(document).ready(function () {
     productSliderHeight();
     miniCard();
     toUp();
-    fixedHeader();
-    //searchResultCornerLeftPosition();
+    searchResultCornerLeftPosition();
+    headerBasketMove();
+    searchMobile();
+    mobileNav();
 });
 
 $(window).resize(function () {
+    clearSearchField();
     productSliderHeight();
-    //searchResultCornerLeftPosition();
+    searchResultCornerLeftPosition();
+    getWindowWidth();
+    headerBasketMove();
+    searchMobile();
+    mobileNav();
 });
 
 function clearSearchField() {
     var $resetBtn = $('.search__reset'),
         $searchResult = $('.search-result');
 
-    $('.search__field').on('keyup', function () {
-        if ($(this).val()) {
-            $resetBtn.css({ "visibility": "visible" });
+    $('.search__field').off('keyup');
+    $resetBtn.off('click');
+    $searchResult.removeClass('active');
 
-            //сюда можно впихать аякс для поиска,
-            //если нужен поиск после каждой введенной буквы (добавить переинициализацию слайдера и высоты продуктов)
-            //productSliderHeight();
-            //productSliderInit();
-            $searchResult.addClass('active');
-        } else {
-            $resetBtn.css({ "visibility": "hidden" });
+    if (getWindowWidth() > 1200) {
+        $('.search__field').on('keyup', function () {
+            if ($(this).val()) {
+                $resetBtn.css({ "visibility": "visible" });
+                $searchResult.addClass('active');
+
+                //сюда можно впихать аякс для поиска,
+                //если нужен поиск после каждой введенной буквы (добавить переинициализацию слайдера и высоты продуктов)
+                //productSliderHeight();
+                //productSliderInit();
+
+            } else {
+                $resetBtn.css({ "visibility": "hidden" });
+                $searchResult.removeClass('active');
+            }
+        });
+
+        $resetBtn.on("click", function () {
+            $(this).css({ "visibility": "hidden" });
             $searchResult.removeClass('active');
-        }
-    });
+        });
+    }
+}
 
-    $resetBtn.on("click", function () {
-        $(this).css({ "visibility": "hidden" });
-        $searchResult.removeClass('active');
-    });
+function searchMobile() {
+    var $searchMobileBtn = $('.header-bottom-search-btn');
+
+    $searchMobileBtn.off('click').removeClass('active');
+    $('.header-nav, .search').css({ 'display': '' });
+    $('.header-bottom-right').removeClass('active');
+
+    if (getWindowWidth() <= 1200) {
+        $searchMobileBtn.on('click', function () {
+            $(this).toggleClass('active');
+            $('.search').toggle();
+            $('.header-nav').toggle();
+            $('.header-bottom-right').toggleClass('active');
+        });
+    }
 }
 
 function searchResultCornerLeftPosition() {
@@ -88,16 +140,18 @@ function productSliderHeight() {
     $('.product-slider__title').setMaxHeights();
 }
 
+//миникарта активируется, когда внутри есть элементы
 function miniCard() {
-    var leaveBasket = false;
+    var leaveBasket = false,
+        $body = $('body');
 
     if ($('.header-basket-minicard__item').length) {
-        $('body').on('mouseenter', '.header-basket, .header-basket-minicard', function () {
+        $body.on('mouseenter', '.header-basket, .header-basket-minicard', function () {
             leaveBasket = false;
             $('.header-basket-minicard').addClass('active');
         });
 
-        $('body').on('mouseleave', '.header-basket, .header-basket-minicard', function () {
+        $body.on('mouseleave', '.header-basket, .header-basket-minicard', function () {
             leaveBasket = true;
             checkLeaveBasket();
         });
@@ -126,29 +180,69 @@ function toUp() {
     });
 }
 
-function fixedHeader() {
-    var $body = $('body'),
-        $main = $('.main'),
-        headerHeight = $('.header').height();
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 0) {
-            $body.addClass('header_fixed');
-            $main.css({ 'margin-top': headerHeight + 'px' });
-        } else {
-            $body.removeClass('header_fixed');
-            $main.css({ 'margin-top': 0 });
-        }
-    });
-}
-
 function productSliderInit() {
     $('.js_product-slider').slick({
         slidesToShow: 6,
         slidesToScroll: 1,
         infinite: true,
-        arrows: true
+        arrows: true,
+        responsive: [{
+            breakpoint: 1201,
+            settings: {
+                slidesToShow: 5
+            }
+        }]
     });
+}
+
+function headerBasketMove() {
+    var $basketCount = $('.header-basket__count');
+
+    if (getWindowWidth() <= 1200) {
+        $('.header-basket').append($basketCount);
+    } else {
+        $('.header-basket__desktop-subtitle').prepend($basketCount);
+    }
+}
+
+function getWindowWidth() {
+    return window.mainWidth = $(window).width();
+}
+
+function mobileNav() {
+    var $button = $('.header-mobile-btn'),
+        $navWrap = $('.header-nav-wrap'),
+        $overlay = $('.page-overlay'),
+        $body = $('body');
+
+    $button.off('click');
+    $overlay.off('click');
+    $body.unbind('touchmove');
+
+    if (getWindowWidth() <= 1024) {
+        $button.on('click', function () {
+            $(this).toggleClass('active');
+            $navWrap.toggleClass('active');
+            $overlay.toggleClass('active');
+        });
+
+        $body.bind('touchmove', function (e) {
+            e.preventDefault();
+        });
+
+        $overlay.on('click', function () {
+            clearMobileNav();
+        });
+    } else {
+        clearMobileNav();
+    }
+
+    function clearMobileNav() {
+        $button.removeClass('active');
+        $navWrap.removeClass('active');
+        $overlay.removeClass('active');
+        $body.unbind('touchmove');
+    }
 }
 
 $.fn.setMaxHeights = function () {

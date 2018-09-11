@@ -44,75 +44,99 @@
         </div>
     </div>
     <div class="header-bottom">
-        <a href="/" class="header-logo">
-            <svg class="header-logo__svg">
-                <use xlink:href='#svg-logo' href='#svg-logo'/>
-            </svg>
-        </a>
-        <ul class="header-nav">
-            <li>
-                <a href="#">
-                    <svg class="header-nav__img">
-                        <use xlink:href='#svg-nav-male' href='#svg-nav-male'/>
-                    </svg>
-                    Для мужчин
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <svg class="header-nav__img">
-                        <use xlink:href='#svg-nav-female' href='#svg-nav-female'/>
-                    </svg>
-                    Для Женщин
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <svg class="header-nav__img">
-                        <use xlink:href='#svg-nav-brands' href='#svg-nav-brands'/>
-                    </svg>
-                    Бренды
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <svg class="header-nav__img">
-                        <use xlink:href='#svg-nav-sales' href='#svg-nav-sales'/>
-                    </svg>
-                    Акции
-                </a>
-            </li>
-        </ul>
-        <form action="" method="post" name="" class="search">
-            <input type="text" name="search" class="search__field"
-                   placeholder="Давайте найдем аромат, более 2500 товаров…">
-            <button type="reset" class="search__reset">
-                <svg class="search__reset-svg">
-                    <use xlink:href='#svg-close' href='#svg-close'/>
+        <div class="header-bottom-left">
+            <div class="header-mobile-btn">
+                <svg class="header-mobile-btn__ico">
+                    <use xlink:href='#svg-mobile-nav' href='#svg-mobile-nav'/>
                 </svg>
-            </button>
-            <button type="submit" value="" class="search__submit">
-                <svg class="search__submit-svg">
+            </div>
+            <a href="/" class="header-logo">
+                <svg class="header-logo__svg">
+                    <use xlink:href='#svg-logo' href='#svg-logo'/>
+                </svg>
+            </a>
+            <div class="header-nav-wrap">
+            <ul class="header-nav">
+                <li>
+                    <a href="#">
+                        <svg class="header-nav__img">
+                            <use xlink:href='#svg-nav-male' href='#svg-nav-male'/>
+                        </svg>
+                        Для мужчин
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="header-nav__img">
+                            <use xlink:href='#svg-nav-female' href='#svg-nav-female'/>
+                        </svg>
+                        Для Женщин
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="header-nav__img">
+                            <use xlink:href='#svg-nav-brands' href='#svg-nav-brands'/>
+                        </svg>
+                        Бренды
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="header-nav__img">
+                            <use xlink:href='#svg-nav-sales' href='#svg-nav-sales'/>
+                        </svg>
+                        Акции
+                    </a>
+                </li>
+            </ul>
+                <ul class="header-nav-mobile">
+                    <li><a href="#">ДОСТАВКА</a></li>
+                    <li><a href="#">ПРЕДЗАКАЗ ТОВАРОВ</a></li>
+                    <li><a href="#">ОПЛАТА</a></li>
+                    <li><a href="#">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-bottom-right">
+            <form action="" method="post" name="" class="search">
+                <input type="text" name="search" class="search__field"
+                       placeholder="Давайте найдем аромат, более 2500 товаров…">
+                <button type="reset" class="search__reset">
+                    <svg class="search__reset-svg">
+                        <use xlink:href='#svg-close' href='#svg-close'/>
+                    </svg>
+                </button>
+                <button type="submit" value="" class="search__submit">
+                    <svg class="search__submit-svg">
+                        <use xlink:href='#svg-magnifier' href='#svg-magnifier'/>
+                    </svg>
+                </button>
+            </form>
+            <div class="header-bottom-search-btn">
+                <svg class="search-btn__svg-magnifier">
                     <use xlink:href='#svg-magnifier' href='#svg-magnifier'/>
                 </svg>
-            </button>
-        </form>
-
-        <a href="#" class="header-basket">
-            <div class="header-basket__img">
-                <svg class="header-basket__svg">
-                    <use xlink:href='#svg-header-basket' href='#svg-header-basket'/>
+                <svg class="search-btn__svg-close">
+                    <use xlink:href='#svg-close' href='#svg-close'/>
                 </svg>
             </div>
-            <div class="header-basket__desktop">
-                Корзина
-                <span class="header-basket__desktop-subtitle">
+            <a href="#" class="header-basket">
+                <div class="header-basket__img">
+                    <svg class="header-basket__svg">
+                        <use xlink:href='#svg-header-basket' href='#svg-header-basket'/>
+                    </svg>
+                </div>
+                <div class="header-basket__desktop">
+                    Корзина
+                    <span class="header-basket__desktop-subtitle">
                     <span class="header-basket__count">2</span> товара <b>240 р</b>
                 </span>
-            </div>
-        </a>
+                </div>
+            </a>
+        </div>
 
-        <!-- миникарта будет отображаться только при наличии .header-basket-minicard__item -->
+        <!-- миникарта будет отображаться только при наличии позиций .header-basket-minicard__item -->
         <div class="header-basket-minicard">
             <div class="header-basket-minicard-inner">
                 <div class="header-basket-minicard-items">
@@ -363,79 +387,71 @@
                     а что с ними делать не совсем ясно. А ведь и у пробников есть свой срок годности.
                 </div>
             </a>
+            <a href="#" class="articles-slider-item">
+                <div class="articles-slider__img">
+                    <img src="assets/images/Temp/sliders/nw-sli-3.jpg" alt="">
+                </div>
+
+                <div class="articles-slider__date">29 июл 2015</div>
+                <div class="articles-slider__title">Tom Ford CHAMPACA ABSOLUTE Unisex</div>
+                <div class="articles-slider__description">
+                    Наверняка и с вами такое случалось: парфюмерных пробников накопилось множество,
+                    а что с ними делать не совсем ясно. А ведь и у пробников есть свой срок годности.
+                </div>
+            </a>
         </div>
     </section>
 
     <section class="brands-slider">
         <div class="container brands-slider-container js_brands-slider">
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/armani.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/VERSACE.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/armani.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/VERSACE.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/armani.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
-                </a></div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/VERSACE.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
-                </a></div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/VERSACE.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/armani.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="#" class="brands-slider-item">
-                    <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
-                </a>
-            </div>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/armani.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/VERSACE.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/armani.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/VERSACE.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/armani.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/VERSACE.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/VERSACE.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/armani.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+            </a>
+            <a href="#" class="brands-slider-item">
+                <img src="assets/images/Brands/SCHWARZKOPF.png" alt="">
+            </a>
         </div>
     </section>
 </main>
@@ -600,9 +616,17 @@
         <circle cx="25" cy="25" r="25" fill="#07080C"/>
         <path d="M25.8911 20.3598L33.6306 27.9029C34.1231 28.3827 34.1231 29.1607 33.6306 29.6403C33.1384 30.1199 32.3402 30.1199 31.8481 29.6403L24.9999 22.9658L18.1519 29.6401C17.6595 30.1197 16.8614 30.1197 16.3693 29.6401C15.8769 29.1604 15.8769 28.3825 16.3693 27.9027L24.1088 20.3596C24.355 20.1198 24.6774 20 24.9998 20C25.3225 20 25.645 20.12 25.8911 20.3598Z" fill="white"/>
     </symbol>
+    <symbol id="svg-mobile-nav" viewBox="0 0 32 32">
+        <rect x="0.5" y="0.5" width="31" height="31"/>
+        <path d="M7 9.5H25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 16H25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 23H22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 
     <symbol id="new" viewBox="0 0 16 16"></symbol>
 </svg>
+
+<div class="page-overlay"></div>
 
 <script src="assets/js/libs.js"></script>
 <script src="assets/js/main.js"></script>
